@@ -28,7 +28,7 @@ trait Limit
      */
     public function setPage(int $page): self
     {
-        $this->page = $page;
+        $this->page = (string) $page;
 
         return $this;
     }
