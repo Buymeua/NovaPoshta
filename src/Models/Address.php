@@ -49,6 +49,9 @@ class Address extends NovaPoshta
 
         $this->getLimit();
         $this->getPage();
+        $this->getAreaRef();
+        $this->getRegionRef();
+        $this->getWarehouse();
 
         /**
          * Если значения пустые - вставляем насильно.

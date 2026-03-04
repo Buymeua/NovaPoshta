@@ -23,10 +23,10 @@ trait Limit
     /**
      * Установка страницы.
      *
-     * @param  int  $page  Номер страницы данных
+     * @param  int|string  $page  Номер страницы данных
      * @return $this
      */
-    public function setPage(string $page): self
+    public function setPage(int|string $page): self
     {
         $this->page = (string) $page;
 
