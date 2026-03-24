@@ -274,9 +274,7 @@ trait InternetDocumentProperty
     {
         if ($this->AfterpaymentOnGoodsCost) {
             $this->methodProperties['AfterpaymentOnGoodsCost'] = $this->AfterpaymentOnGoodsCost;
-        }
-
-        if ($this->BackwardDeliveryData) {
+        } elseif ($this->BackwardDeliveryData) {
             $this->methodProperties['BackwardDeliveryData'][] = $this->BackwardDeliveryData;
         }
     }
