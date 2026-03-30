@@ -133,7 +133,7 @@ dd($warehouses);
 
 ```php
 $adr = new Address;
-//работает ф-ция лимита, но можно и без нее, setPage - НЕ применяется
+//работают setLimit и setPage
 $adr->setLimit(20);
 
 $settlements = $adr->searchSettlements('Дне');
@@ -149,7 +149,7 @@ dd($settlements);
 
 ```php
 $adr = new Address;
-//работает ф-ция лимита, но можно и без нее, setPage - НЕ применяется
+//работают setLimit и setPage
 $adr->setLimit(20);
 $streets = $adr->searchSettlementStreets('e718a680-4b33-11e4-ab6d-005056801329', 'Шевченк');
 

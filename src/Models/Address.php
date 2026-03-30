@@ -158,7 +158,14 @@ class Address extends NovaPoshta
     public function searchSettlements(string $search): array
     {
         $this->calledMethod = 'searchSettlements';
+        $this->methodProperties = [];
+
         $this->getLimit();
+        $this->getPage();
+
+        if (! $this->limit) {
+            $this->methodProperties['Limit'] = config('novaposhta.page_limit');
+        }
 
         $this->methodProperties['CityName'] = $search;
 
@@ -180,7 +187,14 @@ class Address extends NovaPoshta
     public function searchSettlementStreets(string $ref, string $street): array
     {
         $this->calledMethod = 'searchSettlementStreets';
+        $this->methodProperties = [];
+
         $this->getLimit();
+        $this->getPage();
+
+        if (! $this->limit) {
+            $this->methodProperties['Limit'] = config('novaposhta.page_limit');
+        }
 
         $this->methodProperties['SettlementRef'] = $ref;
         $this->methodProperties['StreetName'] = $street;
