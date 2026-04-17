@@ -2,6 +2,13 @@
 
 All notable changes to `NovaPoshta` will be documented in this file
 
+### 2026-04-17
+- [Fix] `setOptionsSeat` теперь принимает не только индекс конфига,
+  но и готовый список мест (массив массивов с явными ключами
+  `weight`, `volumetricWidth`, `volumetricLength`, `volumetricHeight`,
+  `volumetricVolume`). Прежнее поведение с индексом из
+  `config('novaposhta.options_seat')` сохранено для обратной совместимости.
+
 ### 2025-11-23
 - [Add] Добавление метода `payEwByLoyaltyPoints` в `InternetDocument`
 - [Add] Добавление метода `registrationLoyaltyUserByPhone` в `LoyaltyUser`
